@@ -1,26 +1,30 @@
 
+
+using Ecommerce.API.Extensions;
+using System.Threading.Tasks;
+
 namespace Ecommerce.API
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
-                ?? throw new InvalidOperationException("No Connection String");
+            builder.AddConnectionStringService();
 
-            builder.Services.AddDbContext<ApplicationDbContext>(option =>
-            {
-                option.UseSqlServer(connectionString);
-            });
+            builder.Services.AddRepositoryServices();
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
+
+            // auto update-database
+            await app.ApplyMigrationsAsync();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

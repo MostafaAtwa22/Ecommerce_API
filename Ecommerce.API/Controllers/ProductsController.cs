@@ -1,30 +1,27 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-
-namespace Ecommerce.API.Controllers
+﻿namespace Ecommerce.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly ApplicationDbContext context;
+        private readonly IProductRepository _productRepository;
 
-        public ProductsController(ApplicationDbContext context)
+        public ProductsController(IProductRepository productRepository)
         {
-            this.context = context;
+            _productRepository = productRepository;
         }
 
         [HttpGet("GetAll")]
-        public async Task<ActionResult<List<Product>>> GetAll()
+        public async Task<ActionResult<IReadOnlyList<Product>>> GetAll()
         {
-            var products = await context.Products.ToListAsync();
+            var products = await _productRepository.GetAllAsync();
             return Ok(products);
         }
 
         [HttpGet("GetById/{id:int}")]
         public async Task<ActionResult<Product>> GetById(int id)
         {
-            var product = await context.Products.FindAsync(id);
+            var product = await _productRepository.GetByIdAsync(id);
 
             if (product is null)
                 return NotFound($"Product With ID : {id} is not exists");
@@ -44,10 +41,15 @@ namespace Ecommerce.API.Controllers
             return Ok();
         }
 
-        [HttpDelete("Delete")]
-        public IActionResult Delete()
+        [HttpDelete("Delete/{id:int}")]
+        public IActionResult Delete(int id)
         {
-            return Ok();
+            var product = _productRepository.GetByIdAsync(id);
+
+            if (product is null)
+                return NotFound($"The Product with Id : {id} is not exists");
+
+            return Ok(product);
         }
     }
 }
