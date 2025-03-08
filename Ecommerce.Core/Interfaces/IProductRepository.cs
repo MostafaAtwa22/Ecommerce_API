@@ -1,6 +1,4 @@
-﻿using Ecommerce.Core.Models;
-
-namespace Ecommerce.Core.Interfaces
+﻿namespace Ecommerce.Core.Interfaces
 {
     public interface IProductRepository
     {

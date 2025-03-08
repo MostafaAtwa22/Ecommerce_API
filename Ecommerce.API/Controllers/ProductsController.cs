@@ -1,4 +1,6 @@
-﻿namespace Ecommerce.API.Controllers
+﻿using Ecommerce.Core.Specifications;
+
+namespace Ecommerce.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -14,6 +16,7 @@
         [HttpGet("GetAll")]
         public async Task<ActionResult<IReadOnlyList<Product>>> GetAll()
         {
+            var spec = new ProductsWithTypesAndBrandsSpecification();
             var products = await _productRepository.GetAllAsync();
             return Ok(products);
         }
