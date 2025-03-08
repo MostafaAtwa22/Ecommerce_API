@@ -1,6 +1,7 @@
 
 
 using Ecommerce.API.Extensions;
+using Ecommerce.API.Helpers;
 using System.Threading.Tasks;
 
 namespace Ecommerce.API
@@ -21,6 +22,7 @@ namespace Ecommerce.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddAutoMapper(typeof(MappingProfiles));
             var app = builder.Build();
 
             // auto update-database

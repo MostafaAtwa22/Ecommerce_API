@@ -1,4 +1,6 @@
-﻿using Ecommerce.Core.Specifications;
+﻿using AutoMapper;
+using Ecommerce.API.Dtos;
+using Ecommerce.Core.Specifications;
 
 namespace Ecommerce.API.Controllers
 {
@@ -6,30 +8,36 @@ namespace Ecommerce.API.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly IProductRepository _productRepository;
+        private readonly IGenericRepository<Product> _productRepository;
+        private readonly IMapper _mapper;
 
-        public ProductsController(IProductRepository productRepository)
+        public ProductsController(IGenericRepository<Product> productRepository,
+            IMapper mapper)
         {
             _productRepository = productRepository;
+            _mapper = mapper;
         }
 
         [HttpGet("GetAll")]
-        public async Task<ActionResult<IReadOnlyList<Product>>> GetAll()
+        public async Task<ActionResult<IReadOnlyList<ProductDetailsDto>>> GetAll()
         {
             var spec = new ProductsWithTypesAndBrandsSpecification();
-            var products = await _productRepository.GetAllAsync();
-            return Ok(products);
+            var products = await _productRepository.GetAllWithSpec(spec);
+
+
+            return Ok(_mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductDetailsDto>>(products));
         }
 
         [HttpGet("GetById/{id:int}")]
-        public async Task<ActionResult<Product>> GetById(int id)
+        public async Task<ActionResult<ProductDetailsDto>> GetById(int id)
         {
-            var product = await _productRepository.GetByIdAsync(id);
+            var spec = new ProductsWithTypesAndBrandsSpecification(id);
+            var product = await _productRepository.GetWithSpec(spec);
 
             if (product is null)
                 return NotFound($"Product With ID : {id} is not exists");
 
-            return Ok(product);
+            return Ok(_mapper.Map<Product, ProductDetailsDto>(product));
         }
 
         [HttpPost("Create")]
