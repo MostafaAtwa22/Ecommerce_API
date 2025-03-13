@@ -1,12 +1,11 @@
 ﻿using AutoMapper;
 using Ecommerce.API.Dtos;
+using Ecommerce.API.Errors;
 using Ecommerce.Core.Specifications;
 
 namespace Ecommerce.API.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ProductsController : ControllerBase
+    public class ProductsController : BaseAPIController
     {
         private readonly IGenericRepository<Product> _productRepository;
         private readonly IMapper _mapper;
@@ -29,13 +28,15 @@ namespace Ecommerce.API.Controllers
         }
 
         [HttpGet("GetById/{id:int}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
         public async Task<ActionResult<ProductDetailsDto>> GetById(int id)
         {
             var spec = new ProductsWithTypesAndBrandsSpecification(id);
             var product = await _productRepository.GetWithSpec(spec);
 
             if (product is null)
-                return NotFound($"Product With ID : {id} is not exists");
+                return NotFound(new ApiResponse(404));
 
             return Ok(_mapper.Map<Product, ProductDetailsDto>(product));
         }
