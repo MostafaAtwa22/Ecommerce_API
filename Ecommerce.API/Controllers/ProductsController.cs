@@ -17,10 +17,10 @@ namespace Ecommerce.API.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("GetAll")]
-        public async Task<ActionResult<IReadOnlyList<ProductDetailsDto>>> GetAll()
+        [HttpGet("GetAll/{sort:alpha}")]
+        public async Task<ActionResult<IReadOnlyList<ProductDetailsDto>>> GetAll(string sort)
         {
-            var spec = new ProductsWithTypesAndBrandsSpecification();
+            var spec = new ProductsWithTypesAndBrandsSpecification(sort);
             var products = await _productRepository.GetAllWithSpec(spec);
 
 

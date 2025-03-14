@@ -1,4 +1,5 @@
 ﻿using Ecommerce.Core.Specifications;
+using System.Linq;
 
 namespace Ecommerce.Infrastructure
 {
@@ -10,6 +11,12 @@ namespace Ecommerce.Infrastructure
 
             if (specification.Criteria is not null)
                 query = query.Where(specification.Criteria);
+
+            if (specification.OrderBy is not null)
+                query = query.OrderBy(specification.OrderBy);
+
+            if (specification.OrderByDescending is not null)
+                query = query.OrderByDescending(specification.OrderByDescending);
 
             query = specification.Includes.Aggregate(query, (cur, include) => cur.Include(include));
 
