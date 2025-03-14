@@ -18,6 +18,10 @@ namespace Ecommerce.Infrastructure
             if (specification.OrderByDescending is not null)
                 query = query.OrderByDescending(specification.OrderByDescending);
 
+            if (specification.IsPagingEnabled)
+                query = query.Skip(specification.Skip)
+                    .Take(specification.Take);
+
             query = specification.Includes.Aggregate(query, (cur, include) => cur.Include(include));
 
             return query;
