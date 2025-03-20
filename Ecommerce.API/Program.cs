@@ -11,7 +11,7 @@ namespace Ecommerce.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services
-            builder.AddConnectionStringService();
+            builder.AddDefaultConnectionStringService();
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

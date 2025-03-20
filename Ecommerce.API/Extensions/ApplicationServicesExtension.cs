@@ -7,6 +7,7 @@ namespace Ecommerce.API.Extensions
         public static void AddApplicationServices(this IServiceCollection services)
         {
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IBasketRepository, BasketRepository>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             services.Configure<ApiBehaviorOptions>(option =>
@@ -25,6 +26,13 @@ namespace Ecommerce.API.Extensions
                     };
                     return new BadRequestObjectResult(errorResponse);
                 };
+            });
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("Policy", policy =>
+                {
+                    policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200");
+                });
             });
         }
     }

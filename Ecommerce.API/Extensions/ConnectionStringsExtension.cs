@@ -1,8 +1,8 @@
 ﻿namespace Ecommerce.API.Extensions
 {
-    public static class ConnectionStringExtension
+    public static class ConnectionStringsExtension
     {
-        public static void AddConnectionStringService(this WebApplicationBuilder builder)
+        public static void AddDefaultConnectionStringService(this WebApplicationBuilder builder)
         {
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
                 ?? throw new InvalidOperationException("No Connection String");
