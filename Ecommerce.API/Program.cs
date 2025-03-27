@@ -1,6 +1,9 @@
 ﻿using Ecommerce.API.Extensions;
 using Ecommerce.API.Helpers;
 using Ecommerce.API.Middlewares;
+using Ecommerce.Core.Models.Identity;
+using Ecommerce.Infrastructure;
+using Microsoft.AspNetCore.Identity;
 
 namespace Ecommerce.API
 {
@@ -12,6 +15,7 @@ namespace Ecommerce.API
 
             // Add services
             builder.AddDefaultConnectionStringService();
+            builder.Services.AddJWTServices(builder.Configuration);
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -19,7 +23,15 @@ namespace Ecommerce.API
             builder.Services.AddAutoMapper(typeof(MappingProfiles));
             builder.Services.AddSwaggerExtension();
 
+
             var app = builder.Build();
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+                await ApplicationIdentityDbContextSeed.SeedUsersAsync(userManager);
+            }
 
             // Apply migrations
             await app.ApplyMigrationsAsync();
@@ -43,6 +55,7 @@ namespace Ecommerce.API
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllers();

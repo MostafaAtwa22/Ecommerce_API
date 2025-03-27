@@ -1,4 +1,6 @@
-﻿using Microsoft.OpenApi.Models;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
+using System;
 
 namespace Ecommerce.API.Extensions
 {
@@ -24,6 +26,32 @@ namespace Ecommerce.API.Extensions
                     {
                         Name = "Ecommerce",
                         Url = new Uri("https://www.google.com")
+                    }
+                });
+
+                // Enable JWT Bearer token support in Swagger UI
+                option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "Enter 'Bearer' [space] and then your token in the input field.\r\nExample: \"Bearer abcdef12345\""
+                });
+
+                option.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        new string[] { }
                     }
                 });
             });

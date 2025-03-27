@@ -1,9 +1,11 @@
 ﻿
+using Ecommerce.Core.Models.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using System.Reflection;
 
 namespace Ecommerce.Infrastructure.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             :base(options)
@@ -22,5 +24,6 @@ namespace Ecommerce.Infrastructure.Data
         public virtual DbSet<ProductType> ProductTypes { get; set; }
         public virtual DbSet<CustomerBasket> CustomerBaskets { get; set; }
         public virtual DbSet<BasketItem> BasketItems { get; set; }
+        public virtual DbSet<ApplicationUser> ApplicationUsers { get; set; }
     }
 }

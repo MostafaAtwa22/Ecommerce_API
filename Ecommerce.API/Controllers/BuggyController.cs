@@ -1,4 +1,5 @@
 ﻿using Ecommerce.API.Errors;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Ecommerce.API.Controllers
 {
@@ -22,6 +23,13 @@ namespace Ecommerce.API.Controllers
             return Ok();
         }
 
+        [HttpGet("testAuth")]
+        [Authorize]
+        public ActionResult<string> GetSecretText()
+        {
+            return "Secret Stuff";
+        }
+
         [HttpGet("servererror")]
         public ActionResult GetServerError()
         {
@@ -36,12 +44,6 @@ namespace Ecommerce.API.Controllers
         public ActionResult GetNotBadRequest()
         {
             return BadRequest(new ApiResponse(400));
-        }
-
-        [HttpGet("badrequest/{id}")]
-        public ActionResult GetNotFoundRequest(int id)
-        {
-            return Ok();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Ecommerce.API.Dtos;
+using Ecommerce.Core.Models.Identity;
 
 namespace Ecommerce.API.Helpers
 {
@@ -17,6 +18,9 @@ namespace Ecommerce.API.Helpers
                 .ReverseMap();
 
             CreateMap<BasketItem, BasketItemDto>()
+                .ReverseMap();
+
+            CreateMap<Address, UserAddressDto>()
                 .ReverseMap();
         }
     }

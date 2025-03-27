@@ -3,18 +3,27 @@
   "WorkspaceRootPath": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.api\\controllers\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|solutionrelative:controllers\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.api\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|solutionrelative:dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02F17EE2-BCD9-4AB7-A07A-300FCF1F10F6}|..\\Ecommerce.Core\\Ecommerce.Core.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.core\\interfaces\\ibasketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{024D587B-FBAD-4F3B-A96E-E34F65D2264A}|..\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.infrastructure\\repository\\basketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.api\\helpers\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|solutionrelative:helpers\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.api\\extensions\\usermanagerextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|solutionrelative:extensions\\usermanagerextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.api\\extensions\\applicationservicesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|solutionrelative:extensions\\applicationservicesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{024D587B-FBAD-4F3B-A96E-E34F65D2264A}|..\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.infrastructure\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,8 +33,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAkwFYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T15:03:19.793Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Dtos\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\RegisterDto.cs",
+              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Dtos\\RegisterDto.cs",
+              "RelativeToolTip": "Dtos\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:14:03.474Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -52,55 +88,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MappingProfiles.cs",
               "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Helpers\\MappingProfiles.cs",
               "RelativeDocumentMoniker": "Helpers\\MappingProfiles.cs",
               "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Helpers\\MappingProfiles.cs",
               "RelativeToolTip": "Helpers\\MappingProfiles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T01:05:39.182Z",
+              "WhenOpened": "2025-03-25T21:57:52.717Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IBasketRepository.cs",
-              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Core\\Interfaces\\IBasketRepository.cs",
-              "RelativeDocumentMoniker": "..\\Ecommerce.Core\\Interfaces\\IBasketRepository.cs",
-              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Core\\Interfaces\\IBasketRepository.cs",
-              "RelativeToolTip": "..\\Ecommerce.Core\\Interfaces\\IBasketRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "UserManagerExtension.cs",
+              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Extensions\\UserManagerExtension.cs",
+              "RelativeDocumentMoniker": "Extensions\\UserManagerExtension.cs",
+              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Extensions\\UserManagerExtension.cs",
+              "RelativeToolTip": "Extensions\\UserManagerExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T01:01:42.459Z",
+              "WhenOpened": "2025-03-25T21:48:21.663Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BasketController.cs",
-              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Controllers\\BasketController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BasketController.cs",
-              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Controllers\\BasketController.cs",
-              "RelativeToolTip": "Controllers\\BasketController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAA1wDMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ApplicationServicesExtension.cs",
+              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Extensions\\ApplicationServicesExtension.cs",
+              "RelativeDocumentMoniker": "Extensions\\ApplicationServicesExtension.cs",
+              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Extensions\\ApplicationServicesExtension.cs",
+              "RelativeToolTip": "Extensions\\ApplicationServicesExtension.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T00:40:35.439Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T21:46:46.706Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BasketRepository.cs",
-              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Infrastructure\\Repository\\BasketRepository.cs",
-              "RelativeDocumentMoniker": "..\\Ecommerce.Infrastructure\\Repository\\BasketRepository.cs",
-              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Infrastructure\\Repository\\BasketRepository.cs",
-              "RelativeToolTip": "..\\Ecommerce.Infrastructure\\Repository\\BasketRepository.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwDAAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Infrastructure\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "..\\Ecommerce.Infrastructure\\Services\\TokenService.cs",
+              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Infrastructure\\Services\\TokenService.cs",
+              "RelativeToolTip": "..\\Ecommerce.Infrastructure\\Services\\TokenService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T00:39:55.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T21:46:02.107Z"
             }
           ]
         },
