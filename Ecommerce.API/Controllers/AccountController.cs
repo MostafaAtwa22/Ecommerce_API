@@ -2,6 +2,7 @@
 using Ecommerce.API.Dtos;
 using Ecommerce.API.Errors;
 using Ecommerce.API.Extensions;
+using Ecommerce.Core.Models;
 using Ecommerce.Core.Models.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -115,12 +116,29 @@ namespace Ecommerce.API.Controllers
             if (!result.Succeeded)
                 return Unauthorized(new ApiResponse(401));
 
-            return new UserDto
+            var userDto = new UserDto
             {
                 Email = user.Email!,
                 Token = _tokenService.CreateToken(user),
                 DisplayName = user.DisplayName
             };
+
+            RefreshToken refreshToken;
+
+            if (user.RefreshTokens!.Any(t => t.IsActive))
+            {
+                refreshToken = user.RefreshTokens!.FirstOrDefault(t => t.IsActive)!;
+            }
+            else
+            {
+                refreshToken = _tokenService.CreateRefreshToken();
+                user.RefreshTokens!.Add(refreshToken);
+                await _userManager.UpdateAsync(user);
+            }
+
+            _tokenService.SetRefreshTokenInCookie(refreshToken.Token, refreshToken.ExpiresOn);
+
+            return Ok(userDto);
         }
     }
 }

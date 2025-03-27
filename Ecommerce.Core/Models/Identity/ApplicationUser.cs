@@ -6,5 +6,6 @@ namespace Ecommerce.Core.Models.Identity
     {
         public string DisplayName { get; set; } = string.Empty;
         public Address Address { get; set; } = new Address();
+        public List<RefreshToken>? RefreshTokens { get; set; }
     }
 }

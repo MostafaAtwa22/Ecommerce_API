@@ -4,6 +4,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Security.Cryptography;
+using Microsoft.AspNetCore.Http;
 
 namespace Ecommerce.Infrastructure.Services
 {
@@ -11,11 +13,14 @@ namespace Ecommerce.Infrastructure.Services
     {
         private readonly IConfiguration _config;
         private readonly SymmetricSecurityKey _key;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public TokenService(IConfiguration config)
+        public TokenService(IConfiguration config,
+            IHttpContextAccessor httpContextAccessor)
         {
             _config = config;
             _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["JWT:key"]!));
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public string CreateToken(ApplicationUser user)
@@ -45,6 +50,30 @@ namespace Ecommerce.Infrastructure.Services
             var token = tokenHandler.CreateToken(tokenDescriptor);
 
             return tokenHandler.WriteToken(token);
+        }
+
+        public RefreshToken CreateRefreshToken()
+        {
+            var randomNumber = new byte[32];
+            RandomNumberGenerator.Fill(randomNumber);
+
+            return new RefreshToken
+            {
+                Token = Convert.ToBase64String(randomNumber),
+                ExpiresOn = DateTime.UtcNow.AddDays(2),
+                CreatedOn = DateTime.UtcNow,
+            };
+        }
+
+        public void SetRefreshTokenInCookie(string refreshToken, DateTime expires)
+        {
+            var cookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Expires = expires.ToLocalTime()
+            };
+
+            _httpContextAccessor.HttpContext?.Response.Cookies.Append("refreshToken", refreshToken, cookieOptions);
         }
     }
 }
