@@ -3,20 +3,21 @@
   "WorkspaceRootPath": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.api\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|solutionrelative:controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{024D587B-FBAD-4F3B-A96E-E34F65D2264A}|..\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.infrastructure\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.api\\dtos\\createroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|solutionrelative:dtos\\createroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{02F17EE2-BCD9-4AB7-A07A-300FCF1F10F6}|..\\Ecommerce.Core\\Ecommerce.Core.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.core\\interfaces\\iauthenticationservice.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.api\\dtos\\roledetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|solutionrelative:dtos\\roledetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.api\\controllers\\buggycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|solutionrelative:controllers\\buggycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.api\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|solutionrelative:dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02F17EE2-BCD9-4AB7-A07A-300FCF1F10F6}|..\\Ecommerce.Core\\Ecommerce.Core.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.core\\models\\identity\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +27,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAxwNMAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T10:52:04.527Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -54,55 +69,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RoleDetailsDto.cs",
-              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Dtos\\RoleDetailsDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\RoleDetailsDto.cs",
-              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Dtos\\RoleDetailsDto.cs",
-              "RelativeToolTip": "Dtos\\RoleDetailsDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T15:32:29.261Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BuggyController.cs",
-              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Controllers\\BuggyController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BuggyController.cs",
-              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Controllers\\BuggyController.cs",
-              "RelativeToolTip": "Controllers\\BuggyController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T15:18:07.969Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CreateRoleDto.cs",
-              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Dtos\\CreateRoleDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\CreateRoleDto.cs",
-              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Dtos\\CreateRoleDto.cs",
-              "RelativeToolTip": "Dtos\\CreateRoleDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Title": "IAuthenticationService.cs",
+              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Core\\Interfaces\\IAuthenticationService.cs",
+              "RelativeDocumentMoniker": "..\\Ecommerce.Core\\Interfaces\\IAuthenticationService.cs",
+              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Core\\Interfaces\\IAuthenticationService.cs",
+              "RelativeToolTip": "..\\Ecommerce.Core\\Interfaces\\IAuthenticationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T15:17:04.647Z",
+              "WhenOpened": "2025-04-13T11:25:46.072Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RolesController.cs",
-              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Controllers\\RolesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RolesController.cs",
-              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Controllers\\RolesController.cs",
-              "RelativeToolTip": "Controllers\\RolesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
+              "Title": "AuthenticationService.cs",
+              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Infrastructure\\Services\\AuthenticationService.cs",
+              "RelativeDocumentMoniker": "..\\Ecommerce.Infrastructure\\Services\\AuthenticationService.cs",
+              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Infrastructure\\Services\\AuthenticationService.cs",
+              "RelativeToolTip": "..\\Ecommerce.Infrastructure\\Services\\AuthenticationService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwFYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T15:16:46.152Z",
+              "WhenOpened": "2025-04-13T11:17:06.379Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Dtos\\UserDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\UserDto.cs",
+              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Dtos\\UserDto.cs",
+              "RelativeToolTip": "Dtos\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T11:15:22.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Core\\Models\\Identity\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "..\\Ecommerce.Core\\Models\\Identity\\ApplicationUser.cs",
+              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Core\\Models\\Identity\\ApplicationUser.cs",
+              "RelativeToolTip": "..\\Ecommerce.Core\\Models\\Identity\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T11:14:25.901Z"
             }
           ]
         },

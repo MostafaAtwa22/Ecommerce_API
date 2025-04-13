@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Ecommerce.Core.Models
+namespace Ecommerce.Core.Models.Identity
 {
     [Owned]
     public class RefreshToken

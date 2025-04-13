@@ -9,8 +9,9 @@ namespace Ecommerce.API.Dtos
         public string Email { get; set; } = string.Empty;
         public string DisplayName { get; set; } = string.Empty;
         public string Token { get; set; } = string.Empty;
+        public List<string> Roles { get; set; } = new List<string>();
         [JsonIgnore]
-        public string? RefreshToken { get; set; }
+        public string? RefreshToken { get; set; } = string.Empty;
         public DateTime RefreshTokenExpiration { get; set; }
     }
 }

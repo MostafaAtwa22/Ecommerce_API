@@ -1,4 +1,5 @@
 ﻿using Ecommerce.API.Errors;
+using Ecommerce.API.Helpers;
 using Ecommerce.Core.Models.Identity;
 using Ecommerce.Infrastructure.Services;
 using Microsoft.AspNetCore.Identity;
@@ -11,10 +12,10 @@ namespace Ecommerce.API.Extensions
         {
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IBasketRepository, BasketRepository>();
-            services.AddScoped<ITokenService, TokenService>();
-            services.AddHttpContextAccessor();
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-
+            services.AddHttpContextAccessor();
+           
             services.Configure<ApiBehaviorOptions>(option =>
             {
                 option.InvalidModelStateResponseFactory = actionContext =>

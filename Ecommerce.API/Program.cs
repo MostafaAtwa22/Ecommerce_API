@@ -4,6 +4,7 @@ using Ecommerce.API.Middlewares;
 using Ecommerce.Core.Models.Identity;
 using Ecommerce.Infrastructure;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
 
 namespace Ecommerce.API
 {
@@ -22,7 +23,6 @@ namespace Ecommerce.API
             builder.Services.AddApplicationServices();
             builder.Services.AddAutoMapper(typeof(MappingProfiles));
             builder.Services.AddSwaggerExtension();
-
 
             var app = builder.Build();
 

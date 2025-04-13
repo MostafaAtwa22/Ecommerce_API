@@ -3,8 +3,6 @@ using Ecommerce.API.Errors;
 using Ecommerce.Core.Models.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.API.Controllers
 {
@@ -26,12 +24,18 @@ namespace Ecommerce.API.Controllers
         {
             var roles = await _roleManager.Roles.ToListAsync();
 
-            var roleDetails = await Task.WhenAll(roles.Select(async role => new RoleDetailsDto
+            var roleDetails = new List<RoleDetailsDto>();
+
+            foreach (var role in roles)
             {
-                Id = role.Id,
-                Name = role.Name!,
-                TotalUsers = (await _userManager.GetUsersInRoleAsync(role.Name!)).Count
-            }));
+                var usersInRole = await _userManager.GetUsersInRoleAsync(role.Name!);
+                roleDetails.Add(new RoleDetailsDto
+                {
+                    Id = role.Id,
+                    Name = role.Name!,
+                    TotalUsers = usersInRole.Count
+                });
+            }
 
             return Ok(roleDetails);
         }
