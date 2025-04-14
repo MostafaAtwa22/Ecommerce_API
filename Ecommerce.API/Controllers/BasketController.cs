@@ -30,10 +30,12 @@ namespace Ecommerce.API.Controllers
         [HttpPost("Update")]
         public async Task<ActionResult<CustomerBasketDto>> Update(CustomerBasketDto basketDto)
         {
-            var basket = _mapper.Map<CustomerBasket>(basketDto);
-            var updatedBasket = await _basketRepository.UpdateAsync(basket);
+            var customerBasket = _mapper.Map<CustomerBasketDto, CustomerBasket>(basketDto);
+
+            var updatedBasket = await _basketRepository.UpdateAsync(customerBasket);
 
             var updatedBasketDto = _mapper.Map<CustomerBasketDto>(updatedBasket);
+
             return Ok(updatedBasketDto);
         }
 

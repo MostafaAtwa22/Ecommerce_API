@@ -5,8 +5,6 @@ using Ecommerce.API.Extensions;
 using Ecommerce.Core.Models.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using System.Data;
-
 
 namespace Ecommerce.API.Controllers
 {
@@ -86,6 +84,15 @@ namespace Ecommerce.API.Controllers
         [HttpPost("Register")]
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
         {
+            if (CheckEmailExists(registerDto.Email).Result.Value)
+                return BadRequest(new ApiValidationErrorResponse
+                {
+                    Errors = new[]
+                    {
+                        "Email address already exists"
+                    }
+                });
+
             var user = new ApplicationUser
             {
                 DisplayName = registerDto.DisplayName,
