@@ -7,13 +7,13 @@ namespace Ecommerce.API.Controllers
 {
     public class ProductsController : BaseAPIController
     {
-        private readonly IGenericRepository<Product> _productRepository;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public ProductsController(IGenericRepository<Product> productRepository,
+        public ProductsController(IUnitOfWork unitOfWork,
             IMapper mapper)
         {
-            _productRepository = productRepository;
+            _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
@@ -22,7 +22,7 @@ namespace Ecommerce.API.Controllers
             string? sort,int? brandId, int? typeId)
         {
             var spec = new ProductsWithTypesAndBrandsSpecification(sort, brandId, typeId);
-            var products = await _productRepository.GetAllWithSpec(spec);
+            var products = await _unitOfWork.Repository<Product>().GetAllWithSpec(spec);
 
 
             return Ok(_mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductDetailsDto>>(products));
@@ -34,7 +34,7 @@ namespace Ecommerce.API.Controllers
         public async Task<ActionResult<ProductDetailsDto>> GetById(int id)
         {
             var spec = new ProductsWithTypesAndBrandsSpecification(id);
-            var product = await _productRepository.GetWithSpec(spec);
+            var product = await _unitOfWork.Repository<Product>().GetWithSpec(spec);
 
             if (product is null)
                 return NotFound(new ApiResponse(404));
@@ -55,14 +55,24 @@ namespace Ecommerce.API.Controllers
         }
 
         [HttpDelete("Delete/{id:int}")]
-        public IActionResult Delete(int id)
+        public async Task<ActionResult<ProductDetailsDto>> Delete(int id)
         {
-            var product = _productRepository.GetByIdAsync(id);
+            var spec = new ProductsWithTypesAndBrandsSpecification(id);
+            var product = await _unitOfWork.Repository<Product>().GetWithSpec(spec);
 
-            if (product is null)
-                return NotFound($"The Product with Id : {id} is not exists");
+            if (product == null)
+                return NotFound($"The Product with Id : {id} does not exist");
 
-            return Ok(product);
+            _unitOfWork.Repository<Product>().Delete(product);
+
+            var result = await _unitOfWork.Complete();
+
+            if (result <= 0)
+                return BadRequest(new ApiResponse(400, "Couldn't delete this product"));
+
+            var productDto = _mapper.Map<ProductDetailsDto>(product);
+            return Ok(productDto);
         }
+
     }
 }

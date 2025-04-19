@@ -10,12 +10,13 @@ namespace Ecommerce.API.Extensions
     {
         public static void AddApplicationServices(this IServiceCollection services)
         {
+            services.AddHttpContextAccessor();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IBasketRepository, BasketRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            services.AddHttpContextAccessor();
            
             services.Configure<ApiBehaviorOptions>(option =>
             {
