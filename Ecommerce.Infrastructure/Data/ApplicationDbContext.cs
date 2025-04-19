@@ -1,5 +1,6 @@
 ﻿
 using Ecommerce.Core.Models.Identity;
+using Ecommerce.Core.Models.OrderAggregate;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using System.Reflection;
 
@@ -24,6 +25,9 @@ namespace Ecommerce.Infrastructure.Data
         public virtual DbSet<ProductType> ProductTypes { get; set; }
         public virtual DbSet<CustomerBasket> CustomerBaskets { get; set; }
         public virtual DbSet<BasketItem> BasketItems { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<OrderItem> OrderItems { get; set; }
+        public virtual DbSet<DeliveryMethod> DeliveryMethods { get; set; }
         public virtual DbSet<ApplicationUser> ApplicationUsers { get; set; }
     }
 }

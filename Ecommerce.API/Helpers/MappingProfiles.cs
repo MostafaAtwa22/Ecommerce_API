@@ -22,6 +22,10 @@ namespace Ecommerce.API.Helpers
 
             CreateMap<Address, UserAddressDto>()
                 .ReverseMap();
+
+            CreateMap<UserAddressDto, Core.Models.OrderAggregate.Address>()
+                .ReverseMap();
+
         }
     }
 }

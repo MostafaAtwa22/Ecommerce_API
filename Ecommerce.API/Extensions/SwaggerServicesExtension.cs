@@ -29,7 +29,6 @@ namespace Ecommerce.API.Extensions
                     }
                 });
 
-                // Enable JWT Bearer token support in Swagger UI
                 option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",

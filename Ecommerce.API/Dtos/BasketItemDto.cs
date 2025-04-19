@@ -27,5 +27,12 @@ namespace Ecommerce.API.Dtos
         [MinLength(3), MaxLength(255)]
         public string Type { get; set; } = string.Empty;
     }
+    public class OrderDto
+    {
+        public string BasketId { get; set; } = string.Empty;
+        public int DeliveredMethod { get; set; }
+
+        public UserAddressDto ShipToAddress { get; set; } = default!;
+    }
 }
  

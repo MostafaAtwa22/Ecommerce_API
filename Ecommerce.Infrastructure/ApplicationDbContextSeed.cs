@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Ecommerce.Core.Models.OrderAggregate;
+using Microsoft.Extensions.Logging;
 using System.Text.Json;
 
 namespace Ecommerce.Infrastructure
@@ -31,6 +32,14 @@ namespace Ecommerce.Infrastructure
                     var products = JsonSerializer.Deserialize<List<Product>>(productsData);
                     foreach (var item in products!)
                         await context.Set<Product>().AddAsync(item);
+                    await context.SaveChangesAsync();
+                }
+                if (!context.DeliveryMethods.Any())
+                {
+                    var dmData = File.ReadAllText("../Ecommerce.Infrastructure/SeedData/delivery.json");
+                    var methods = JsonSerializer.Deserialize<List<DeliveryMethod>>(dmData);
+                    foreach (var item in methods!)
+                        await context.Set<DeliveryMethod>().AddAsync(item);
                     await context.SaveChangesAsync();
                 }
             }
