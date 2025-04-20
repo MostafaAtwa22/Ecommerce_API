@@ -34,5 +34,32 @@ namespace Ecommerce.API.Controllers
 
             return Ok(order);
         }
+
+        [HttpGet("GetAll")]
+        public async Task<ActionResult<IReadOnlyList<OrderToReturnDto>>> GetOrdersForUser()
+        {
+            var email = HttpContext.User.RetrieveEmailFromPrincipal();
+
+            var orders = await _orderService.GetOrderAsync(email);
+
+            return Ok(_mapper.Map<IReadOnlyList<OrderToReturnDto>>(orders));
+        }
+
+        [HttpGet("GetById{id}")]
+        public async Task<ActionResult<OrderToReturnDto>> GetOrderByIdForUser(int id)
+        {
+            var email = HttpContext.User.RetrieveEmailFromPrincipal();
+
+            var order = await _orderService.GetOrderByIdAsync(id, email);
+
+            if (order is null)
+                return NotFound(new ApiResponse(404, $"The order with Id = {id} is not found"));
+
+            return Ok(_mapper.Map<Order, OrderToReturnDto>(order));
+        }
+
+        [HttpGet("DeliveryMethods")]
+        public async Task<ActionResult<IReadOnlyList<DeliveryMethod>>> GetDeliveryMethods()
+            => Ok(await _orderService.GetDeliveryMethodAsync());
     }
 }

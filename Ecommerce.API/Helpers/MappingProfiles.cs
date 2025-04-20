@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Ecommerce.API.Dtos;
 using Ecommerce.Core.Models.Identity;
+using Ecommerce.Core.Models.OrderAggregate;
 
 namespace Ecommerce.API.Helpers
 {
@@ -20,12 +21,23 @@ namespace Ecommerce.API.Helpers
             CreateMap<BasketItem, BasketItemDto>()
                 .ReverseMap();
 
-            CreateMap<Address, UserAddressDto>()
+            CreateMap<Core.Models.Identity.Address, UserAddressDto>()
                 .ReverseMap();
 
             CreateMap<UserAddressDto, Core.Models.OrderAggregate.Address>()
                 .ReverseMap();
 
+            CreateMap<Order, OrderToReturnDto>()
+                .ForMember(d => d.DeliveryMethod, o => o.MapFrom(s => s.DeliveryMethod.ShortName))
+                .ForMember(d => d.ShippingPrice, o => o.MapFrom(s => s.DeliveryMethod.Price))
+                .ReverseMap();
+
+            CreateMap<OrderItem, OrderItemDto>()
+                .ForMember(d => d.ProductId, o => o.MapFrom(s => s.ItemOrdered.ProductItemId))
+                .ForMember(d => d.ProductName, o => o.MapFrom(s => s.ItemOrdered.Name))
+                .ForMember(d => d.PictureUrl, o => o.MapFrom(s => s.ItemOrdered.PictureUrl))
+                .ForMember(d => d.PictureUrl, o => o.MapFrom<OrderItemUrlResolver>())
+                .ReverseMap();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Ecommerce.Core.Models.OrderAggregate;
+using Ecommerce.Core.Specifications;
 
 namespace Ecommerce.Infrastructure.Services
 {
@@ -45,19 +46,26 @@ namespace Ecommerce.Infrastructure.Services
             return order;
         }
 
-        public Task<IReadOnlyList<DeliveryMethod>> GetDeliveryMethodAsync()
+        public async Task<IReadOnlyList<DeliveryMethod>> GetDeliveryMethodAsync()
+            => await _unitOfWork.Repository<DeliveryMethod>().GetAllAsync();
+
+        public async Task<IReadOnlyList<Order>> GetOrderAsync(string buyerEmail)
         {
-            throw new NotImplementedException();
+            var spec = new OrdersWithItemsAndOrderingSpecification(buyerEmail);
+
+            return await _unitOfWork.Repository<Order>().GetAllWithSpec(spec);
         }
 
-        public Task<IReadOnlyList<Order>> GetOrderAsync(string buyerEmail)
+        public async Task<Order?> GetOrderByIdAsync(int id, string buyerEmail)
         {
-            throw new NotImplementedException();
-        }
+            var spec = new OrdersWithItemsAndOrderingSpecification(id, buyerEmail);
 
-        public Task<Order> GetOrderByIdAsync(int id, string buyerEmail)
-        {
-            throw new NotImplementedException();
+            var order = await _unitOfWork.Repository<Order>().GetWithSpec(spec);
+
+            if (order is null)
+                return null!;
+
+            return order;
         }
     }
 }

@@ -25,6 +25,7 @@
         public DeliveryMethod DeliveryMethod { get; set; } = default!;
 
         public IReadOnlyList<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
+
         public decimal SubTotal { get; set; }
 
         public OrderStatus Status { get; set; } = OrderStatus.Pending;
