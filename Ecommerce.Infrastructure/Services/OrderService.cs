@@ -8,11 +8,13 @@ namespace Ecommerce.Infrastructure.Services
 
         private readonly IUnitOfWork _unitOfWork;
         private readonly IBasketRepository _basketRepository;
+        private readonly IPaymentService _paymentService;
 
-        public OrderService(IUnitOfWork unitOfWork, IBasketRepository basketRepository)
+        public OrderService(IUnitOfWork unitOfWork, IBasketRepository basketRepository, IPaymentService paymentService)
         {
             _unitOfWork = unitOfWork;
             _basketRepository = basketRepository;
+            _paymentService = paymentService;
         }
         public async Task<Order> CreateOrderAsync(string buyerEmail, int deliveryMethodId, string basketId,
             Address shippingAddress)
@@ -32,7 +34,16 @@ namespace Ecommerce.Infrastructure.Services
 
             var subtotal = items.Sum(item => item.Price * item.Quantity);
 
-            var order = new Order(buyerEmail, shippingAddress, deliveredMethod!, items, subtotal);
+            var spec = new OrderByPaymentIntentIdSpecification(basket.PaymentIntentId);
+            var existingOrder = await _unitOfWork.Repository<Order>().GetWithSpec(spec);
+
+            if (existingOrder is not null)
+            {
+                _unitOfWork.Repository<Order>().Delete(existingOrder);
+                await _paymentService.CreateOrUpdatePaymentIntent(basket.PaymentIntentId);
+            }
+
+            var order = new Order(buyerEmail, shippingAddress, deliveredMethod!, items, subtotal, basket.PaymentIntentId);
 
             _unitOfWork.Repository<Order>().Add(order);
 
@@ -40,8 +51,6 @@ namespace Ecommerce.Infrastructure.Services
 
             if (result <= 0)
                 return null!;
-
-            await _basketRepository.DeleteAsync(basketId);
 
             return order;
         }
