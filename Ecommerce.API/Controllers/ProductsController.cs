@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Ecommerce.API.Dtos;
 using Ecommerce.API.Errors;
+using Ecommerce.API.Helpers;
 using Ecommerce.Core.Specifications;
 
 namespace Ecommerce.API.Controllers
@@ -17,6 +18,7 @@ namespace Ecommerce.API.Controllers
             _mapper = mapper;
         }
 
+        [Cached(600)]
         [HttpGet("GetAll")]
         public async Task<ActionResult<IReadOnlyList<ProductDetailsDto>>> GetAll(
             string? sort,int? brandId, int? typeId)
@@ -28,6 +30,7 @@ namespace Ecommerce.API.Controllers
             return Ok(_mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductDetailsDto>>(products));
         }
 
+        [Cached(600)]
         [HttpGet("GetById/{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]

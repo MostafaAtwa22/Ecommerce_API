@@ -17,6 +17,7 @@ namespace Ecommerce.API.Extensions
             services.AddScoped<IBasketRepository, BasketRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();
+            services.AddScoped<IResponseCachingService, ResponseCachingService>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
            
             services.Configure<ApiBehaviorOptions>(option =>

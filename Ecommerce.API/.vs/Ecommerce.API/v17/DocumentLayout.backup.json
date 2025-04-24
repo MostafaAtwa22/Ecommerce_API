@@ -3,23 +3,16 @@
   "WorkspaceRootPath": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.api\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|solutionrelative:controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.api\\extensions\\applicationservicesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|solutionrelative:extensions\\applicationservicesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{024D587B-FBAD-4F3B-A96E-E34F65D2264A}|..\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.infrastructure\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02F17EE2-BCD9-4AB7-A07A-300FCF1F10F6}|..\\Ecommerce.Core\\Ecommerce.Core.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.core\\interfaces\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{024D587B-FBAD-4F3B-A96E-E34F65D2264A}|..\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.infrastructure\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02F17EE2-BCD9-4AB7-A07A-300FCF1F10F6}|..\\Ecommerce.Core\\Ecommerce.Core.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.core\\specifications\\orderbypaymentintentidspecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02F17EE2-BCD9-4AB7-A07A-300FCF1F10F6}|..\\Ecommerce.Core\\Ecommerce.Core.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.core\\models\\orderaggregate\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|d:\\programming\\backend\\api projects\\ecommerce_api\\ecommerce.api\\helpers\\cachedattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9C05ACA-DE0C-4C8A-80B5-426CF5663B84}|Ecommerce.API.csproj|solutionrelative:helpers\\cachedattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,89 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PaymentController.cs",
-              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Controllers\\PaymentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PaymentController.cs",
-              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Controllers\\PaymentController.cs",
-              "RelativeToolTip": "Controllers\\PaymentController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T15:32:22.778Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PaymentService.cs",
-              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Infrastructure\\Services\\PaymentService.cs",
-              "RelativeDocumentMoniker": "..\\Ecommerce.Infrastructure\\Services\\PaymentService.cs",
-              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Infrastructure\\Services\\PaymentService.cs",
-              "RelativeToolTip": "..\\Ecommerce.Infrastructure\\Services\\PaymentService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAqwFUAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T15:17:30.266Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IPaymentService.cs",
-              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Core\\Interfaces\\IPaymentService.cs",
-              "RelativeDocumentMoniker": "..\\Ecommerce.Core\\Interfaces\\IPaymentService.cs",
-              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Core\\Interfaces\\IPaymentService.cs",
-              "RelativeToolTip": "..\\Ecommerce.Core\\Interfaces\\IPaymentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T15:16:35.817Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OrderByPaymentIntentIdSpecification.cs",
-              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Core\\Specifications\\OrderByPaymentIntentIdSpecification.cs",
-              "RelativeDocumentMoniker": "..\\Ecommerce.Core\\Specifications\\OrderByPaymentIntentIdSpecification.cs",
-              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Core\\Specifications\\OrderByPaymentIntentIdSpecification.cs",
-              "RelativeToolTip": "..\\Ecommerce.Core\\Specifications\\OrderByPaymentIntentIdSpecification.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T19:48:53.463Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Infrastructure\\Services\\OrderService.cs",
-              "RelativeDocumentMoniker": "..\\Ecommerce.Infrastructure\\Services\\OrderService.cs",
-              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Infrastructure\\Services\\OrderService.cs",
-              "RelativeToolTip": "..\\Ecommerce.Infrastructure\\Services\\OrderService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwDQAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T19:47:22.356Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Order.cs",
-              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Core\\Models\\OrderAggregate\\Order.cs",
-              "RelativeDocumentMoniker": "..\\Ecommerce.Core\\Models\\OrderAggregate\\Order.cs",
-              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.Core\\Models\\OrderAggregate\\Order.cs",
-              "RelativeToolTip": "..\\Ecommerce.Core\\Models\\OrderAggregate\\Order.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBAAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T19:46:16.088Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -135,6 +47,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationServicesExtension.cs",
+              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Extensions\\ApplicationServicesExtension.cs",
+              "RelativeDocumentMoniker": "Extensions\\ApplicationServicesExtension.cs",
+              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Extensions\\ApplicationServicesExtension.cs",
+              "RelativeToolTip": "Extensions\\ApplicationServicesExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T13:08:18.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CachedAttribute.cs",
+              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Helpers\\CachedAttribute.cs",
+              "RelativeDocumentMoniker": "Helpers\\CachedAttribute.cs",
+              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Helpers\\CachedAttribute.cs",
+              "RelativeToolTip": "Helpers\\CachedAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T12:57:42.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\programming\\Backend\\API Projects\\Ecommerce_API\\Ecommerce.API\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T12:39:00.112Z",
+              "EditorCaption": ""
             }
           ]
         },

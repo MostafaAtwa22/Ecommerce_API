@@ -1,4 +1,5 @@
 ﻿
+using Ecommerce.Core.Models.Caching;
 using Ecommerce.Core.Models.Identity;
 using Ecommerce.Core.Models.OrderAggregate;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -29,5 +30,6 @@ namespace Ecommerce.Infrastructure.Data
         public virtual DbSet<OrderItem> OrderItems { get; set; }
         public virtual DbSet<DeliveryMethod> DeliveryMethods { get; set; }
         public virtual DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public virtual DbSet<CacheEntry> CacheEntries { get; set; }
     }
 }
