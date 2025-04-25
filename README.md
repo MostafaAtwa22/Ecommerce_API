@@ -33,14 +33,13 @@ A robust and scalable RESTful API for an e-commerce platform built with ASP.NET 
 - **Database**: Entity Framework Core
 - **Authentication**: JWT Token Authentication
 - **Documentation**: Swagger/OpenAPI
-- **Caching**: Redis
+- **Caching**: SQL Server
 - **Payment Processing**: Stripe Integration
 
 ## 📋 Prerequisites
 
 - .NET 7.0 SDK or later
 - SQL Server
-- Redis Server (for caching)
 - Visual Studio 2022 or any preferred IDE
 
 ## ⚙️ Configuration
@@ -147,12 +146,8 @@ Ecommerce.Infrastructure/
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 📧 Contact
 
-Your Name - [your-email@example.com]
+Mostafa Atwa - [atwamostafa5@gmail.com.com]
 
 Project Link: [https://github.com/yourusername/Ecommerce_API] 
