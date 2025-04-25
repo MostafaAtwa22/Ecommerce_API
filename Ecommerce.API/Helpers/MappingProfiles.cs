@@ -15,6 +15,14 @@ namespace Ecommerce.API.Helpers
                 .ForMember(d => d.PictureUrl, o => o.MapFrom<ProductUrlResolver>())
                 .ReverseMap();
 
+            CreateMap<CreateProductDto, Product>()
+                .ForMember(d => d.PictureUrl, o => o.Ignore())
+                .ReverseMap();
+
+            CreateMap<UpdateProductDto, Product>()
+                .ForMember(d => d.PictureUrl, o => o.Ignore())
+                .ReverseMap();
+
             CreateMap<CustomerBasket, CustomerBasketDto>()
                 .ReverseMap();
 

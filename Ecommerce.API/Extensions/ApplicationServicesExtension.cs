@@ -12,6 +12,7 @@ namespace Ecommerce.API.Extensions
         {
             services.AddHttpContextAccessor();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IImageService, ImageService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IPaymentService, PaymentService>();
             services.AddScoped<IBasketRepository, BasketRepository>();
