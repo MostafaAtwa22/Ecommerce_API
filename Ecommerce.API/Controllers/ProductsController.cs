@@ -3,7 +3,7 @@ using Ecommerce.API.Dtos;
 using Ecommerce.API.Errors;
 using Ecommerce.API.Helpers;
 using Ecommerce.Core.Specifications;
-using Ecommerce.Infrastructure.FileSettings;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Ecommerce.API.Controllers
 {
@@ -52,6 +52,7 @@ namespace Ecommerce.API.Controllers
             return Ok(_mapper.Map<Product, ProductDetailsDto>(product));
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost("Create")]
         public async Task<ActionResult<ProductDetailsDto>> Create([FromForm] CreateProductDto dto)
         {
@@ -67,6 +68,7 @@ namespace Ecommerce.API.Controllers
             return Ok(productDetailsDto);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("Update/{id:int}")]
         public async Task<ActionResult<ProductDetailsDto>> Update(int id, [FromForm] UpdateProductDto dto)
         {
@@ -91,6 +93,7 @@ namespace Ecommerce.API.Controllers
             return Ok(updatedDto);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("Delete/{id:int}")]
         public async Task<ActionResult<ProductDetailsDto>> Delete(int id)
         {
